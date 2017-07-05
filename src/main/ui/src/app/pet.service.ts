@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 export class PetService {
     constructor(private http: Http) { }
 
-    private url: string = "http://localhost:8080/pets";
+    private url: string = "/pets";
 
     getPets() {
         return this.http.get(this.url).map((response: Response) => response.json());

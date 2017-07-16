@@ -1,0 +1,24 @@
+form {
+    position: relative;
+}
+
+button {
+    float: right;
+}
+
+span {
+    display: block;
+    overflow: hidden;
+    padding-right:5px;
+}
+
+input {
+    width: 100%;
+}
+
+.messagebox {
+    margin-top: 4px;
+    margin-bottom: 2px;
+    border: 1px solid #c0c0c0;
+    border-radius: 3px;
+}

@@ -1,0 +1,9 @@
+<form>
+  <button pButton type="submit" icon="fa fa-paper-plane"></button>
+  <span><input type="text" pInputText /></span>
+  <div class="messages">
+    <div class="messagebox" *ngFor="let message of messages">
+      <app-chat-message [message]="message"></app-chat-message>
+    </div>
+  </div>
+</form>

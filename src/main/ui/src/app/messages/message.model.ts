@@ -1,6 +1,6 @@
 import { uuid } from '../util/uuid';
 
-export class Message {
+export class ChatMessage {
     id: String;
     sentAt: Date;
     sender: String;

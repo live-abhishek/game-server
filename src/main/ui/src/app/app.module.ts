@@ -16,6 +16,7 @@ import { ChatMessageComponent } from './chat-message/chat-message.component';
 
 import { InputTextModule } from 'primeng/primeng';
 import { ButtonModule } from 'primeng/primeng';
+import { StompService } from 'ng2-stomp-service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { ButtonModule } from 'primeng/primeng';
     InputTextModule,
     ButtonModule
   ],
-  providers: [],
+  providers: [StompService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

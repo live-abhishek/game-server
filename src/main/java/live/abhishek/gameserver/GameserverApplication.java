@@ -32,7 +32,7 @@ public class GameserverApplication {
 		return new AbstractWebSocketMessageBrokerConfigurer() {
 			@Override
 			public void registerStompEndpoints(StompEndpointRegistry stompEndpointRegistry) {
-				stompEndpointRegistry.addEndpoint("chat").withSockJS();
+				stompEndpointRegistry.addEndpoint("chat").setAllowedOrigins( "*" ).withSockJS();
 			}
 
 			@Bean

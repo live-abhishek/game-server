@@ -11,7 +11,7 @@ import { StompService } from 'ng2-stomp-service';
 export class ChatBoxComponent implements OnInit, OnDestroy {
 
   private messages: ChatMessage[] = [];
-  private currentChatText: String;
+  private currentChatText: String = '';
 
   private subscribed: boolean;
   private subscription: any;
@@ -33,7 +33,7 @@ export class ChatBoxComponent implements OnInit, OnDestroy {
 
   send(): void {
     this.stompService.send('/app/send', this.currentChatText);
-    this.currentChatText = null;
+    this.currentChatText = '';
   }
 
   subscribe() {
@@ -68,7 +68,6 @@ export class ChatBoxComponent implements OnInit, OnDestroy {
     this.subscription.unsubscribe();
     this.subscription = null;
     this.subscribed = false;
+    console.log('Unsubscribing to subscription');
   }
-
-
 }

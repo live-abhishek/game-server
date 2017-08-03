@@ -1,8 +1,8 @@
 <form>
-  <button pButton type="submit" icon="fa fa-paper-plane" (click)="send()"></button>
-  <span><input type=" text " pInputText [(ngModel)]="currentChatText " name="currentChatText "/></span>
-  <div class="messages ">
-    <div class="messagebox " *ngFor="let message of messages ">
+  <button pButton type="submit" icon="fa fa-paper-plane" [disabled]="!this.currentChatText.length" (click)="send()"></button>
+  <span><input type="text" pInputText [(ngModel)]="currentChatText " name="currentChatText "/></span>
+  <div class="messages">
+    <div class="messagebox" *ngFor="let message of this.messages">
       <app-chat-message [message]="message "></app-chat-message>
     </div>
   </div>
